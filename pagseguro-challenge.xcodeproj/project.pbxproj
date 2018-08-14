@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		6A4DCD88212393E000EAB49E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4DCD87212393E000EAB49E /* AppDelegate.swift */; };
-		6A4DCD8A212393E000EAB49E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4DCD89212393E000EAB49E /* ViewController.swift */; };
 		6A4DCD8D212393E000EAB49E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4DCD8B212393E000EAB49E /* Main.storyboard */; };
 		6A4DCD8F212393E000EAB49E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A4DCD8E212393E000EAB49E /* Assets.xcassets */; };
 		6A4DCD92212393E000EAB49E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4DCD90212393E000EAB49E /* LaunchScreen.storyboard */; };
+		6A4DCD9B212394B100EAB49E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4DCD9A212394B100EAB49E /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A4DCD84212393E000EAB49E /* pagseguro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pagseguro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A4DCD87212393E000EAB49E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A4DCD89212393E000EAB49E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A4DCD8C212393E000EAB49E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A4DCD8E212393E000EAB49E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A4DCD91212393E000EAB49E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A4DCD93212393E000EAB49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A4DCD9A212394B100EAB49E /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,22 @@
 		6A4DCD86212393E000EAB49E /* pagseguro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				6A4DCD99212394A500EAB49E /* Entities */,
 				6A4DCD87212393E000EAB49E /* AppDelegate.swift */,
-				6A4DCD89212393E000EAB49E /* ViewController.swift */,
 				6A4DCD8B212393E000EAB49E /* Main.storyboard */,
 				6A4DCD8E212393E000EAB49E /* Assets.xcassets */,
 				6A4DCD90212393E000EAB49E /* LaunchScreen.storyboard */,
 				6A4DCD93212393E000EAB49E /* Info.plist */,
 			);
 			path = "pagseguro-challenge";
+			sourceTree = "<group>";
+		};
+		6A4DCD99212394A500EAB49E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6A4DCD9A212394B100EAB49E /* Beer.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A4DCD8A212393E000EAB49E /* ViewController.swift in Sources */,
+				6A4DCD9B212394B100EAB49E /* Beer.swift in Sources */,
 				6A4DCD88212393E000EAB49E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
