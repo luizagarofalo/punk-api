@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HbJ-gl-JY9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beers-->
+        <scene sceneID="XTl-8V-ol9">
+            <objects>
+                <viewController title="Beers" id="4gI-O8-qxN" customClass="BeersViewController" customModule="pagseguro_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ukY-zL-BLH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOG-oW-epB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4gI-O8-qxN" id="xQh-73-apt"/>
+                                    <outlet property="delegate" destination="4gI-O8-qxN" id="7DU-Up-eQc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1sD-pz-Msw" firstAttribute="bottom" secondItem="cOG-oW-epB" secondAttribute="bottom" id="7dc-Et-i9T"/>
+                            <constraint firstItem="cOG-oW-epB" firstAttribute="leading" secondItem="1sD-pz-Msw" secondAttribute="leading" id="eUZ-LB-YQc"/>
+                            <constraint firstItem="1sD-pz-Msw" firstAttribute="trailing" secondItem="cOG-oW-epB" secondAttribute="trailing" id="rnu-7h-5N7"/>
+                            <constraint firstItem="cOG-oW-epB" firstAttribute="top" secondItem="1sD-pz-Msw" secondAttribute="top" id="xO3-r5-MgA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1sD-pz-Msw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Beers" id="dkY-yT-90h"/>
+                    <connections>
+                        <outlet property="beersTableView" destination="cOG-oW-epB" id="mfi-EC-Kwy"/>
+                        <segue destination="bO0-Ba-8QW" kind="show" identifier="showDetailsSegue" id="O3m-XE-eUj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Px0-8o-LfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="-6.746626686656672"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="pnK-4p-jtL">
+            <objects>
+                <viewController title="Details" id="bO0-Ba-8QW" customClass="DetailsViewController" customModule="pagseguro_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvg-7p-ADO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="55X-k3-xuh">
+                                <rect key="frame" x="25" y="89" width="325" height="135.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-S9-VWY">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="135.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lqJ-S9-VWY" secondAttribute="height" multiplier="3:4" id="cpm-oV-eTF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tFU-W3-f8J">
+                                        <rect key="frame" x="126.5" y="19" width="198.5" height="98"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rabiator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU4-GB-i3A">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imperial Wheat Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lY-up-3NX">
+                                                <rect key="frame" x="0.0" y="27" width="131" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klw-dj-mEJ">
+                                                <rect key="frame" x="0.0" y="54" width="28" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IBU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-wx-WK1">
+                                                <rect key="frame" x="0.0" y="81" width="23" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOw-8e-UAA">
+                                <rect key="frame" x="25" y="249.5" width="325" height="50.5"/>
+                                <string key="text">Imperial Wheat beer / Weizenbock brewed by a homesick German in leather trousers. Think banana bread, bubble gum and David Hasselhoff.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uOw-8e-UAA" firstAttribute="top" secondItem="55X-k3-xuh" secondAttribute="bottom" constant="25" id="1aJ-A0-cX6"/>
+                            <constraint firstItem="0ZV-9w-xFc" firstAttribute="trailing" secondItem="uOw-8e-UAA" secondAttribute="trailing" constant="25" id="BbZ-cG-4ic"/>
+                            <constraint firstItem="uOw-8e-UAA" firstAttribute="leading" secondItem="0ZV-9w-xFc" secondAttribute="leading" constant="25" id="Kfu-k4-Fgb"/>
+                            <constraint firstItem="0ZV-9w-xFc" firstAttribute="trailing" secondItem="55X-k3-xuh" secondAttribute="trailing" constant="25" id="SPk-j5-ANw"/>
+                            <constraint firstItem="55X-k3-xuh" firstAttribute="top" secondItem="0ZV-9w-xFc" secondAttribute="top" constant="25" id="pJd-T5-Ypv"/>
+                            <constraint firstItem="55X-k3-xuh" firstAttribute="leading" secondItem="0ZV-9w-xFc" secondAttribute="leading" constant="25" id="xa6-6L-0pK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0ZV-9w-xFc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aca-yM-iex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381.5999999999999" y="-8.5457271364317844"/>
+        </scene>
+        <!--Punk API-->
+        <scene sceneID="obR-ph-6ao">
+            <objects>
+                <navigationController title="Punk API" automaticallyAdjustsScrollViewInsets="NO" id="HbJ-gl-JY9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xmr-4V-Dv9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4gI-O8-qxN" kind="relationship" relationship="rootViewController" id="fOI-hy-fhp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIh-i9-JWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-7"/>
+        </scene>
+    </scenes>
+</document>
