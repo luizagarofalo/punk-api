@@ -2,7 +2,7 @@ import UIKit
 
 class BeersViewController: UIViewController {
     @IBOutlet weak var beersTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.beersTableView.register(UINib(nibName: "BeersTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
