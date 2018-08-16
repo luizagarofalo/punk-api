@@ -19,11 +19,18 @@ class BeersViewController: UIViewController {
     }
 
     private func loadData() {
-        NetworkRequest.load { (beers) in
-            self.beers += beers
-        }
+        NetworkRequest.load(onComplete: updateBeers)
     }
 
+    private func updateBeers(response: Result<Beers>) {
+        switch response {
+        case .success(let beers):
+            self.beers += beers
+
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension BeersViewController: UITableViewDataSource {
