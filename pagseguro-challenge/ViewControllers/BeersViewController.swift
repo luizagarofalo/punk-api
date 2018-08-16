@@ -49,6 +49,15 @@ extension BeersViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       self.performSegue(withIdentifier: "showDetailsSegue", sender: nil)
+        let beer = self.beers[indexPath.row]
+        self.performSegue(withIdentifier: "showDetailsSegue", sender: beer)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsViewController = segue.destination as? DetailsViewController {
+            if let beer = sender as? Beer {
+                detailsViewController.beer = beer
+            }
+        }
     }
 }

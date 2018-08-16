@@ -114,6 +114,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0ZV-9w-xFc"/>
                     </view>
+                    <connections>
+                        <outlet property="abv" destination="Klw-dj-mEJ" id="Zwq-Bq-iNd"/>
+                        <outlet property="bDescription" destination="uOw-8e-UAA" id="jGM-pd-qvq"/>
+                        <outlet property="ibu" destination="TyQ-wx-WK1" id="HlQ-Lo-wIJ"/>
+                        <outlet property="img" destination="lqJ-S9-VWY" id="wfb-2J-EWm"/>
+                        <outlet property="name" destination="XU4-GB-i3A" id="2dP-2C-4hs"/>
+                        <outlet property="tagline" destination="8lY-up-3NX" id="daV-lb-ofS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aca-yM-iex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
