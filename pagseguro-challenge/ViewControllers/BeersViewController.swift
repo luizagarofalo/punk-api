@@ -1,3 +1,4 @@
+import SDWebImage
 import UIKit
 
 class BeersViewController: UIViewController {
@@ -38,6 +39,7 @@ extension BeersViewController: UITableViewDataSource {
 
         cell.name.text = self.beers[indexPath.row].name
         cell.abv.text = String(describing: Float(self.beers[indexPath.row].abv!))
+        cell.img.sd_setImage(with: URL(string: self.beers[indexPath.row].imageURL!), completed: nil)
 
         return cell
     }

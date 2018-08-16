@@ -1,3 +1,4 @@
+import SDWebImage
 import UIKit
 
 class DetailsViewController: UIViewController {
@@ -21,5 +22,6 @@ class DetailsViewController: UIViewController {
         self.abv.text = "ABV: \(Float((beer?.abv)!))"
         self.ibu.text = "IBU: \(Float((beer?.ibu)!))"
         self.bDescription.text = beer?.description
+        self.img.sd_setImage(with: URL(string: (beer?.imageURL!)!), completed: nil)
     }
 }

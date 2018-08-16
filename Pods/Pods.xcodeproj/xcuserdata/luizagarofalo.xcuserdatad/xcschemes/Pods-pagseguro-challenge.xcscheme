@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0266B2CB459B7A626D55FE09FCB50215"
+               BlueprintIdentifier = "99ADE51C54DED869A8B2D3B532FB886E"
                BuildableName = "Pods_pagseguro_challenge.framework"
                BlueprintName = "Pods-pagseguro-challenge"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0266B2CB459B7A626D55FE09FCB50215"
+            BlueprintIdentifier = "99ADE51C54DED869A8B2D3B532FB886E"
             BuildableName = "Pods_pagseguro_challenge.framework"
             BlueprintName = "Pods-pagseguro-challenge"
             ReferencedContainer = "container:Pods.xcodeproj">

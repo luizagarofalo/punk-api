@@ -6,6 +6,7 @@ target 'pagseguro-challenge' do
   use_frameworks!
 
   # Pods for pagseguro-challenge
+pod 'SDWebImage/GIF'
 pod 'SwiftLint'
 
 end
