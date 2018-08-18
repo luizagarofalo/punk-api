@@ -26,9 +26,10 @@ class BeersViewController: UIViewController {
         switch response {
         case .success(let beers):
             self.beers += beers
-
         case .failure(let error):
-            print(error.localizedDescription)
+            self.showError(title: "Oops!",
+                           message: "Something went wrong. Please, try again.",
+                           error: error)
         }
     }
 }
